@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+
+    <style>
+        .zip {
+            fill: none;
+            stroke: #CCC;
+            stroke-width: .5px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">HaVen!</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 align-self-start">
+            <p>
+                <b>Jobs</b> <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="1000"
+                                   data-slider-min="0"
+                                   data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="R"
+                                   type="range" value=""/>
+            </p>
+            <p>
+                <b>Heatlh</b> <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
+                                     data-slider-min="0"
+                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="G"
+                                     type="range" value=""/>
+            </p>
+            <p>
+                <b>Traffic</b> <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                      data-slider-max="255" data-slider-min="0"
+                                      data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="B"
+                                      type="range" value=""/>
+            </p>
+            <div id="RGB"></div>
+        </div>
+        <div class="col-lg-4 align-self-start">
+            <p>
+                <b>Education</b> <input class="span2" data-slider-handle="square" data-slider-id="RC"
+                                        data-slider-max="255" data-slider-min="0"
+                                        data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="R"
+                                        type="range" value=""/>
+            </p>
+            <p>
+                <b>Cost of Living</b> <input class="span2" data-slider-handle="round" data-slider-id="GC"
+                                             data-slider-max="255"
+                                             data-slider-min="0" data-slider-step="1" data-slider-tooltip="hide"
+                                             data-slider-value="128" id="G" type="range"
+                                             value=""/>
+            </p>
+            <p>
+                <b>Crime</b> <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                    data-slider-max="255" data-slider-min="0"
+                                    data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="B"
+                                    type="range" value=""/>
+            </p>
+            <div id="RGB1"></div>
+        </div>
+        <div class="col-lg-4 align-self-start">
+            <p>Adjust the sliders to find your desired zipcode. Moving the slider to the right on any index indicates
+                higher preference on that specific index.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 align-self-start">
+            <div id="maps-viz">
+                <iframe width="100%" height="694" frameborder="0"
+                        src="https://observablehq.com/embed/@d3/choropleth?cells=chart"></iframe>
+            </div>
+        </div>
+        <div class="col-lg-4 align-self-start">
+            <div id="sale-list">
+                <p>House Listing here</p>
+                <img src="https://www.zillowstatic.com/vstatic/80d5e73/static/logos/Zillowlogo_200x50.gif">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+
+</body>
+</html>
