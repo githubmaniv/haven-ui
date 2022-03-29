@@ -1,6 +1,6 @@
 [
-  "Google Cloud Platform",
-  "Amazon AWS",
-  "Docker",
-  "Digital Ocean"
+  { "value": 1, "text": "Find places with high number of job opportunities" },
+  { "value": 2, "text": "Retiree,I want to live in a low cost town with good health care" },
+  { "value": 3, "text": "Young family with kids,looking for good school district" },
+  { "value": 4, "text": "Empty Nesters, Looking for outdoor recreation" }
 ]
