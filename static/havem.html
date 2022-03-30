@@ -28,8 +28,9 @@
     </div>
 </nav>
 <div class="container">
+
     <div class="row">
-        <div class="col-lg-2 align-self-start">
+        <div class="col-lg-3 align-self-start">
             <p>
                 <b>Jobs</b> <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="1000"
                                    data-slider-min="0"
@@ -48,9 +49,9 @@
                                       data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="B"
                                       type="range" value=""/>
             </p>
-            <div id="RGB"></div>
+
         </div>
-        <div class="col-lg-4 align-self-start">
+        <div class="col-lg-3 align-self-start">
             <p>
                 <b>Education</b> <input class="span2" data-slider-handle="square" data-slider-id="RC"
                                         data-slider-max="255" data-slider-min="0"
@@ -70,34 +71,61 @@
                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="B"
                                     type="range" value=""/>
             </p>
-            <div id="RGB1"></div>
-        </div>
-        <div class="col-lg-4 align-self-start">
-            <p>Adjust the sliders to find your desired zipcode. Moving the slider to the right on any index indicates
-                higher preference on that specific index.</p>
         </div>
     </div>
-</div>
-<div class="container">
+    <div class="row">
+        <div class="col-lg-6 align-self-start">
+            <input autocomplete="off" class="form-control basicAutoComplete"
+                   data-url="form-data/location-list.json"
+                   type="text" name="loc">
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-8 align-self-start">
-            <div id="maps-viz">
-                <iframe width="100%" height="694" frameborder="0"
-                        src="https://observablehq.com/embed/@d3/choropleth?cells=chart"></iframe>
-            </div>
+            <div id="observablehq-chart-8078efc5"></div>
+            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
         </div>
         <div class="col-lg-4 align-self-start">
             <div id="sale-list">
-                <p>House Listing here</p>
                 <img src="https://www.zillowstatic.com/vstatic/80d5e73/static/logos/Zillowlogo_200x50.gif">
+                <p>House Listing here</p>
             </div>
         </div>
     </div>
 </div>
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="https://d3js.org/queue.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
 
+<script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@d3/choropleth.js?v=3";
+    const main=new Runtime().module(define, name => {
+        if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-8078efc5"));
+        return ["key"].includes(name);
+    });
 
+    // Redefine the cell “data” as the contents of the local file population.json;
+    // this will affect the chart embedded above.
+    main.redefine("unemployment", fetch("/zipcode-rating").then(response => response.json()));
+</script>
+<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
+<script>
+    $(function () {
+            // Basic
+            $('.basicAutoComplete').autoComplete();
+        }
+    );
+</script>
 </body>
 </html>

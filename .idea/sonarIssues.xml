@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/search.py">
           <value>
             <set />
@@ -34,6 +39,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/static/form-data/query.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/static/form-data/unemployment.csv">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/static/havem.html">
           <value>
             <set />
           </value>
