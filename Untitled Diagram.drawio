@@ -1,35 +1,131 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T01:04:44.714Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="KdSyzSnzMtywkjz23bor" version="17.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-31T01:50:56.121Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="B8x0btr8Il7wYwmNA2tx" version="17.3.0" type="github" pages="3">
   <diagram id="8wpx45fELjsQAQ58wtwq" name="Page-1">
-    <mxGraphModel dx="935" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2035" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="CQYCSHmL3HS_aeStSgbg-4" value="zipcode" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="110" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="240" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-7" value="&lt;span&gt;Unemployment Rate&lt;/span&gt;&lt;br&gt;&lt;span&gt;Average Salary&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="163" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="293" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-8" value="Destination Flights&lt;br&gt;Business Establishments" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="270" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="400" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-9" value="Health Index Factors" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="217" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="347" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-10" value="Crime Rate" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="323" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="453" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-11" value="Education" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="377" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="507" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-12" value="Cost of Living" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="300" y="430" width="190" height="30" as="geometry" />
+          <mxGeometry x="-350" y="560" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-13" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="100" width="50" height="370" as="geometry" />
+          <mxGeometry x="-390" y="230" width="50" height="370" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-14" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-180;" vertex="1" parent="1">
-          <mxGeometry x="480" y="100" width="50" height="365" as="geometry" />
+          <mxGeometry x="-170" y="230" width="50" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-21" value="census.gov" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="280" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-22" value="Survey" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="347" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-23" value="US&lt;br&gt;Department of Labor" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="420" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-24" value="US&lt;br&gt;Department of transportation" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="483" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-1" value="Python&amp;nbsp; notebook" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="383" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-3" value="zipcodes ranlked by indices" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="70" y="400" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-4" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="382.5" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-5" value="Python Flask" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="400" y="383" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-6" value="html/javascript" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="540" y="385" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-7" value="sqllite" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="445" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxpxfu8jugFoBcDvqSWj-9" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="CQYCSHmL3HS_aeStSgbg-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-70" y="293" as="sourcePoint" />
+            <mxPoint x="-70" y="413" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="S1brQ_Bz1ZWL1Rz-U8W8" name="Page-2">
+    <mxGraphModel dx="935" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" visible="0" />
+        <mxCell id="_g-b_srjHpi6N_woomha-7" value="system elements" parent="0" />
+        <mxCell id="_g-b_srjHpi6N_woomha-9" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.external_data_resource" vertex="1" parent="_g-b_srjHpi6N_woomha-7">
+          <mxGeometry x="80" y="190" width="47.4" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_g-b_srjHpi6N_woomha-10" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#3B8DF1;shape=mxgraph.gcp2.monitor" vertex="1" parent="_g-b_srjHpi6N_woomha-7">
+          <mxGeometry x="80" y="290" width="52.94" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="_g-b_srjHpi6N_woomha-11" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#3B8DF1;shape=mxgraph.gcp2.files" vertex="1" parent="_g-b_srjHpi6N_woomha-7">
+          <mxGeometry x="200" y="233" width="58.76" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="_g-b_srjHpi6N_woomha-12" value="PySpark" style="sketch=0;html=1;fillColor=#5184F3;strokeColor=none;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;spacingTop=-6;fontSize=11;fontStyle=1;fontColor=#999999;shape=mxgraph.gcp2.hexIcon;prIcon=compute_engine" vertex="1" parent="_g-b_srjHpi6N_woomha-7">
+          <mxGeometry x="310" y="230" width="66" height="58.5" as="geometry" />
+        </mxCell>
+        <mxCell id="_g-b_srjHpi6N_woomha-6" value="zone" parent="0" visible="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cWh35GH3dnxh4hYsF7k4" name="Page-3">
+    <mxGraphModel dx="935" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gg_gPu0GYFI-nv4FePiS-1" value="census.gov" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gg_gPu0GYFI-nv4FePiS-3" value="" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nsxK-573QQLhQIh8CD1P-1" value="Surveys" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nsxK-573QQLhQIh8CD1P-2" value="" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-1" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-2" value="" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-3" value="&lt;span&gt;US Dept. Of&lt;/span&gt;&lt;br&gt;&lt;span&gt;transportation&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="275" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-4" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-5" value="" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFf-5Eo6B5Yauno3_NEW-6" value="US Bureau of &lt;br&gt;Labor Statistics" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="155" y="365" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
