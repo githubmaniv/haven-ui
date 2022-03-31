@@ -1,14 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T00:51:09.816Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="aMnuNjxJFJ7tTTqms3Jz" version="17.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-31T01:04:44.714Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="KdSyzSnzMtywkjz23bor" version="17.3.0" type="github">
   <diagram id="8wpx45fELjsQAQ58wtwq" name="Page-1">
     <mxGraphModel dx="935" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="CQYCSHmL3HS_aeStSgbg-4" value="zipcode" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="245" y="120" width="80" height="30" as="geometry" />
+          <mxGeometry x="300" y="110" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CQYCSHmL3HS_aeStSgbg-7" value="&lt;span&gt;Unemployment Rate&lt;/span&gt;&lt;br&gt;&lt;span&gt;Average Salary&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="190" y="170" width="190" height="30" as="geometry" />
+          <mxGeometry x="300" y="163" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-8" value="Destination Flights&lt;br&gt;Business Establishments" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="270" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-9" value="Health Index Factors" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="217" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-10" value="Crime Rate" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="323" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-11" value="Education" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="377" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-12" value="Cost of Living" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="430" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-13" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="100" width="50" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="CQYCSHmL3HS_aeStSgbg-14" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="50" height="365" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
