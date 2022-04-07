@@ -8,7 +8,22 @@
             <set />
           </value>
         </entry>
+        <entry key="/Q1">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../cse6242/hw4/Q1/Q1.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../cse6242/hw4/Q1/simplified_pagerank_iter1.txt">
           <value>
             <set />
           </value>

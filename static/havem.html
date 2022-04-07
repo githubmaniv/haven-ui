@@ -35,7 +35,7 @@
                 <b>Jobs</b> <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="1000"
                                    data-slider-min="0"
                                    data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="R"
-                                   type="range" value=""/>
+                                   type="range" value=""  />
             </p>
             <p>
                 <b>Heatlh</b> <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
@@ -117,7 +117,7 @@
 
     // Redefine the cell “data” as the contents of the local file population.json;
     // this will affect the chart embedded above.
-    main.redefine("unemployment", fetch("/zipcode-rating").then(response => response.json()));
+    main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
 </script>
 <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
 <script>
