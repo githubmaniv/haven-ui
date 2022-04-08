@@ -81,14 +81,51 @@
         </div>
     </div>
     <div class="row">
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" aria-current="page" href="#">Your Results</a>
+            <a class="nav-link" href="#">Matching Counties</a>
+            <a class="nav-link" href="#">Home Listings</a>
+        </nav>
+    </div>
+
+    <div class="row">
         <div class="col-lg-8 align-self-start">
             <div id="observablehq-chart-8078efc5"></div>
             <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
         </div>
         <div class="col-lg-4 align-self-start">
             <div id="sale-list">
-                <img src="https://www.zillowstatic.com/vstatic/80d5e73/static/logos/Zillowlogo_200x50.gif">
-                <p>House Listing here</p>
+                <p>Top 10 matches</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">SNo</th>
+                        <th scope="col">County</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>1</td>
+                        <td>Laurel</td>
+                        <td>90.8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>2</td>
+                        <td>Allegheny</td>
+                        <td>85.6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>3</td>
+                        <td>Washington</td>
+                        <td>78.9</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
