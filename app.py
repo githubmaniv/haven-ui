@@ -11,12 +11,11 @@ def hello_world():
 
 @app.route('/county-rating')
 def county_rating():
+    #abs(random() % 1000)/100.0 as
     conn = sqlite3.connect( DB )
     conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
     db = conn.cursor()
-    rows = db.execute('''
-    SELECT id,county,state,rate from counties
-    ''').fetchall()
+    rows = db.execute("SELECT id,county,state,rate from counties").fetchall()
     conn.close()
     return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
 

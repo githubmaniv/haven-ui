@@ -1,7 +1,58 @@
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/choropleth
-function Choropleth(data, {
+
+console.log(d3.version)
+
+var usa
+var states
+var counties
+var statemesh
+var data
+
+d3.json("json/counties-albers-10m.json")
+    .then(function(us) {
+        // Code from your callback goes here...
+        console.log('this works')
+        usa=us
+        states = topojson.feature(us, us.objects.states)
+        counties = topojson.feature(us, us.objects.counties)
+        statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b)
+        statemap = new Map(states.features.map(d => [d.id, d]))
+
+        d3.json('/county-rating')
+            .then(function(data){
+                console.log(counties)
+                console.log("about to execute visual")
+
+              chart=  Choropleth(data,{
+                    id: d => d.id,
+                    value: d => d.rate,
+                    scale: d3.scaleQuantize,
+                    domain: [1, 10],
+                    range: d3.schemeBlues[9],
+                    title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
+                    features: counties,
+                    borders: statemesh,
+                    width: 975,
+                    height: 610
+                })
+               // console.log(chart)
+                document.getElementById("observablehq-chart").appendChild(chart)
+             })
+            .catch(function(error){
+                console.log(error)
+            })
+    })
+    .catch(function(error) {
+        // Do some error handling.
+        console.log('error')
+    });
+
+
+
+
+function Choropleth(data,{
     id = d => d.id, // given d in data, returns the feature id
     value = () => undefined, // given d in data, returns the quantitative value
     title, // given a feature f and possibly a datum d, returns the hover text
@@ -28,14 +79,19 @@ function Choropleth(data, {
     const N = d3.map(data, id);
     const V = d3.map(data, value).map(d => d == null ? NaN : +d);
     const Im = new d3.InternMap(N.map((id, i) => [id, i]));
+
+    console.log('inside cloro, features print')
+    console.log(features)
     const If = d3.map(features.features, featureId);
+
+    //console.log(d3.version())
 
     // Compute default domains.
     if (domain === undefined) domain = d3.extent(V);
 
     // Construct scales.
     const color = scale(domain, range);
-    if (unknown !== undefined) color.unknown(unknown);
+    if (color.unknown && unknown !== undefined) color.unknown(unknown);
 
     // Compute titles.
     if (title === undefined) {
@@ -63,11 +119,11 @@ function Choropleth(data, {
     // Construct a path generator.
     const path = d3.geoPath(projection);
 
-    const svg = d3.create("svg")
+    svg = d3.create("svg")
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
-        .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+        .attr("style", "width: 100%; height: auto; height: intrinsic;");
 
     if (outline != null) svg.append("path")
         .attr("fill", fill)
@@ -92,6 +148,7 @@ function Choropleth(data, {
         .attr("stroke-width", strokeWidth)
         .attr("stroke-opacity", strokeOpacity)
         .attr("d", path(borders));
+
 
     return Object.assign(svg.node(), {scales: {color}});
 }
