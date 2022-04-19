@@ -35,20 +35,20 @@
             <p>
                 <b>Jobs</b> <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="100"
                                    data-slider-min="0"
-                                   data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="job_index"
+                                   data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="job_index"
                                    type="range" value="0" onchange="index_changed(value)"  />
             </p>
             <p>
                 <b>Heatlh</b> <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
                                      data-slider-min="0"
-                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="health_index"
+                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="health_index"
                                      type="range" value="" onchange="index_changed(value)" />
             </p>
             <p>
                 <b>Traffic</b> <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
                                       data-slider-max="255" data-slider-min="0"
-                                      data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="traffic_index"
-                                      type="range" value=""/>
+                                      data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="traffic_index"
+                                      type="range" value="" onchange="index_changed(value)"/>
             </p>
 
         </div>
@@ -56,21 +56,21 @@
             <p>
                 <b>Education</b> <input class="span2" data-slider-handle="square" data-slider-id="RC"
                                         data-slider-max="255" data-slider-min="0"
-                                        data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="education_index"
-                                        type="range" value=""/>
+                                        data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="education_index"
+                                        type="range" value="" onchange="index_changed(value)"/>
             </p>
             <p>
                 <b>Cost of Living</b> <input class="span2" data-slider-handle="round" data-slider-id="GC"
                                              data-slider-max="255"
                                              data-slider-min="0" data-slider-step="1" data-slider-tooltip="hide"
-                                             data-slider-value="128" id="col_index" type="range"
-                                             value=""/>
+                                             data-slider-value="0" id="col_index" type="range"
+                                             value="" onchange="index_changed(value)"/>
             </p>
             <p>
                 <b>Crime</b> <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
                                     data-slider-max="255" data-slider-min="0"
-                                    data-slider-step="1" data-slider-tooltip="hide" data-slider-value="128" id="crime_index"
-                                    type="range" value=""/>
+                                    data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="safety_index"
+                                    type="range" value="" onchange="index_changed(value)"/>
             </p>
         </div>
     </div>
@@ -129,7 +129,16 @@
     function index_changed(value) {
         //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
         //topojson = require("topojson-client@3")
+
      console.log("index changed")
+
+        refreshChloropeth($('#job_index').val(),
+            $('#education_index').val(),
+            $('#health_index').val(),
+            $('#col_index').val(),
+            $('#traffic_index').val(),
+            $('#safety_index').val()
+            );
     }
 </script>
 </body>

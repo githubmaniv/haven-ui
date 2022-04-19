@@ -2,52 +2,61 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/choropleth
 
-console.log(d3.version)
 
-var usa
-var states
-var counties
-var statemesh
-var data
 
-d3.json("json/counties-albers-10m.json")
-    .then(function(us) {
-        // Code from your callback goes here...
-        console.log('this works')
-        usa=us
-        states = topojson.feature(us, us.objects.states)
-        counties = topojson.feature(us, us.objects.counties)
-        statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b)
-        statemap = new Map(states.features.map(d => [d.id, d]))
+function refreshChloropeth(job,edu,health,col,traffic,safety)
+{
+    console.log(d3.version)
+    d3.json("json/counties-albers-10m.json")
+        .then(function(us) {
+            // Code from your callback goes here...
+            console.log('this works')
+            console.log(job,edu,health,col,traffic,safety)
+            usa=us
+            states = topojson.feature(us, us.objects.states)
+            counties = topojson.feature(us, us.objects.counties)
+            statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b)
+            statemap = new Map(states.features.map(d => [d.id, d]))
 
-        d3.json('/county-rating')
-            .then(function(data){
-                console.log(counties)
-                console.log("about to execute visual")
+            qry='job='+job+'&edu='+edu+'&health='+health+'&col='+col+'&traffic='+traffic+'&safety='+safety
 
-              chart=  Choropleth(data,{
-                    id: d => d.id,
-                    value: d => d.rate,
-                    scale: d3.scaleQuantize,
-                    domain: [1, 10],
-                    range: d3.schemeBlues[9],
-                    title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
-                    features: counties,
-                    borders: statemesh,
-                    width: 975,
-                    height: 610
+            d3.json('/search-county?'+qry)
+                .then(function(data){
+                    console.log(counties)
+                    console.log("about to execute visual")
+
+                    chart=  Choropleth(data,{
+                        id: d => d.id,
+                        value: d => d.rate,
+                        scale: d3.scaleQuantize,
+                        domain: [1, 10],
+                        range: d3.schemeBlues[9],
+                        title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
+                        features: counties,
+                        borders: statemesh,
+                        width: 975,
+                        height: 610
+                    })
+                    // console.log(chart)
+                    if (document.getElementById("chart"))
+                    {
+                        document.getElementById("chart").remove()
+                    }
+
+                    document.getElementById("observablehq-chart").appendChild(chart)
                 })
-               // console.log(chart)
-                document.getElementById("observablehq-chart").appendChild(chart)
-             })
-            .catch(function(error){
-                console.log(error)
-            })
-    })
-    .catch(function(error) {
-        // Do some error handling.
-        console.log('error')
-    });
+                .catch(function(error){
+                    console.log(error)
+                })
+        })
+        .catch(function(error) {
+            // Do some error handling.
+            console.log('error')
+        });
+}
+
+
+
 
 
 
@@ -120,6 +129,7 @@ function Choropleth(data,{
     const path = d3.geoPath(projection);
 
     svg = d3.create("svg")
+        .attr("id","chart")
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
