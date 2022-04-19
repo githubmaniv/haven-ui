@@ -78,18 +78,26 @@
 
     </div>
     <div class="row">
-        <nav class="nav nav-pills nav-fill">
-            <a class="nav-link active" aria-current="page" href="#">Your Results</a>
-            <a class="nav-link" href="#">Matching Counties</a>
-            <a class="nav-link" href="#">Home Listings</a>
-        </nav>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#tab-01" aria-controls="tab-01" role="tab" data-toggle="tab">Tab 01</a></li>
+            <li role="presentation"><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Tab 02</a></li>
+            <li role="presentation"><a href="#tab-03" aria-controls="tab-03" role="tab" data-toggle="tab">Tab 03</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="tab-01">
+                 <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                    <div id="observablehq-chart"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab-02">
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab-03">
+                content of tab 3
+            </div>
+        </div>
     </div>
 
     <div class="row-chloro">
-        <div class="col-lg-12 align-self-start">
-            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
-            <div id="observablehq-chart"></div>
-        </div>
 
     </div>
 </div>
