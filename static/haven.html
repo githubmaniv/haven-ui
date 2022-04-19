@@ -74,26 +74,39 @@
             </p>
         </div>
     </div>
-    <div class="row" id="row2">
 
-    </div>
     <div class="row">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#tab-01" aria-controls="tab-01" role="tab" data-toggle="tab">Tab 01</a></li>
-            <li role="presentation"><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Tab 02</a></li>
-            <li role="presentation"><a href="#tab-03" aria-controls="tab-03" role="tab" data-toggle="tab">Tab 03</a></li>
-        </ul>
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="tab-01">
-                 <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+        <div class="col-lg-7 align-self-start">
+            <ul class="nav nav-pills nav-fill" role="tablist">
+                <li role="presentation" class="nav-item active"><a href="#tab-01" aria-controls="tab-01" role="tab" data-toggle="tab">Search Results</a></li>
+                <li role="presentation" class= "nav-item"><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Similar Counties</a></li>
+                <li role="presentation" class= "nav-item"><a href="#tab-03" aria-controls="tab-03" role="tab" data-toggle="tab">House Listings</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab-01">
                     <div id="observablehq-chart"></div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="tab-02">
+                    <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab-02">
 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab-03">
+                    content of tab 3
+                </div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="tab-03">
-                content of tab 3
-            </div>
+        </div>
+        <div class="col-lg-5 align-self-start" >
+            <table class="table" id="results-table"
+                   data-pagination="true" data-side-pagination="client"
+                   data-show-export="true" >
+                <thead>
+                <tr>
+                    <th data-field="state">State</th>
+                    <th data-field="county">County</th>
+                    <th data-field="rate">Score</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </div>
 
@@ -115,8 +128,15 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
+<!-- Include Bootstrap for styling -->
+<link rel="stylesheet"
+      href=
+              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-
+<!-- Include the Bootstrap Table CSS
+for the table -->
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 <script src="js/Chloropeth.js"></script>
 <script>
    // var states=null
@@ -126,7 +146,6 @@
    // data=fetch("/county-rating").then(response => response.json());
    // console.log(d3.version)
     //console.log(data)
-
 
     $(function () {
             // Basic
@@ -138,7 +157,7 @@
         //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
         //topojson = require("topojson-client@3")
 
-     console.log("index changed")
+     console.log("index changed");
 
         refreshChloropeth($('#job_index').val(),
             $('#education_index').val(),
@@ -147,6 +166,7 @@
             $('#traffic_index').val(),
             $('#safety_index').val()
             );
+
     }
 </script>
 </body>
