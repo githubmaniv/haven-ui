@@ -11,14 +11,25 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
         .then(function(us) {
             // Code from your callback goes here...
             console.log('this works')
-            console.log(job,edu,health,col,traffic,safety)
+
+            //index_denominator=((Number(job)+Number(edu)+Number(health)+Number(col)+Number(traffic)+Number(safety))/6)*6
+            index_denominator= ((Number(job)+Number(edu)+Number(health)+Number(col)+Number(traffic)+Number(safety))/6)*6
+            console.log("index_denominator");
+            console.log(index_denominator)
+            job_weight=Number(job)/index_denominator
+            console.log((job_weight))
+            edu_weight=Number(edu)/index_denominator
+            health_weight=Number(health)/index_denominator
+            col_weight=Number(col)/index_denominator
+            traffic_weight=Number(traffic)/index_denominator
+            safety_weight=Number(safety)/index_denominator
             usa=us
             states = topojson.feature(us, us.objects.states)
             counties = topojson.feature(us, us.objects.counties)
             statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b)
             statemap = new Map(states.features.map(d => [d.id, d]))
 
-            qry='job='+job+'&edu='+edu+'&health='+health+'&col='+col+'&traffic='+traffic+'&safety='+safety
+            qry='job='+job_weight+'&edu='+edu_weight+'&health='+health_weight+'&col='+col_weight+'&traffic='+traffic_weight+'&safety='+safety_weight
 
             d3.json('/search-county?'+qry)
                 .then(function(data){
@@ -34,7 +45,7 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
                         id: d => d.id,
                         value: d => d.rate,
                         scale: d3.scaleQuantize,
-                        domain: [1, 10],
+                        domain: [1, 100],
                         range: d3.schemeBlues[9],
                         title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
                         features: counties,
@@ -56,7 +67,7 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
         })
         .catch(function(error) {
             // Do some error handling.
-            console.log('error')
+            console.log(error)
         });
 }
 
@@ -94,8 +105,6 @@ function Choropleth(data,{
     const V = d3.map(data, value).map(d => d == null ? NaN : +d);
     const Im = new d3.InternMap(N.map((id, i) => [id, i]));
 
-    console.log('inside cloro, features print')
-    console.log(features)
     const If = d3.map(features.features, featureId);
 
     //console.log(d3.version())
@@ -143,7 +152,7 @@ function Choropleth(data,{
     if (outline != null) svg.append("path")
         .attr("fill", fill)
         .attr("stroke", "currentColor")
-        .attr("d", path(outline));
+        .attr("d", path(outline))
 
     svg.append("g")
         .selectAll("path")
@@ -151,8 +160,11 @@ function Choropleth(data,{
         .join("path")
         .attr("fill", (d, i) => color(V[Im.get(If[i])]))
         .attr("d", path)
+        .on("click",(d,i)=>countyclicked(i))
         .append("title")
-        .text((d, i) => title(d, Im.get(If[i])));
+        .text((d, i) => title(d, Im.get(If[i])))
+
+
 
     if (borders != null) svg.append("path")
         .attr("pointer-events", "none")
@@ -162,8 +174,18 @@ function Choropleth(data,{
         .attr("stroke-linejoin", strokeLinejoin)
         .attr("stroke-width", strokeWidth)
         .attr("stroke-opacity", strokeOpacity)
-        .attr("d", path(borders));
+        .attr("d", path(borders))
 
 
     return Object.assign(svg.node(), {scales: {color}});
+}
+function countyclicked(d) {
+    //alert(d.id)
+    console.log(d)
+    //alert(d.properties.name);
+    //document.getElementById('zillow').src='https://www.trulia.com/'
+    window.open("https://www.zillow.com/homes/"+d.properties.name+'-county');
+        //'https://www.redfin.com/county/2362/PA/Allegheny-County'
+        //='https://www.zillow.com/homes/'+d.properties.name+'-county'
+
 }
