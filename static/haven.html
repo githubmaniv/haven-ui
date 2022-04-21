@@ -185,7 +185,7 @@ for the table -->
     }
 
     function LinkFormatter(value, row, index) {
-        return "<a href='https://zillow.com/homes/"+value.replace(' County','')+"-county' target=\"_blank\">"+value+"</a>";
+        return value+"<a href='https://zillow.com/homes/"+value.replace(' County','')+"-county' target=\"_blank\">"+' Homes'+"</a>";
         //return value;//.replace(' County');
     }
 </script>
