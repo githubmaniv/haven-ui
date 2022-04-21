@@ -34,9 +34,12 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
             d3.json('/search-county?'+qry)
                 .then(function(data){
                     console.log(data)
-                    $('table').bootstrapTable({
-                        data: data.slice(0,10)
-                    });
+                    sortedFoods = data.slice().sort((a, b) => d3.descending(a.rate, b.rate)).slice(0,10)
+
+                    console.log(sortedFoods)
+
+                    $('#results-table').bootstrapTable({data: sortedFoods})
+                    $('#results-table').bootstrapTable('load', sortedFoods);
 
                     console.log("about to execute visual")
 
