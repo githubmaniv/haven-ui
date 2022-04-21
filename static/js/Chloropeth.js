@@ -33,10 +33,9 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
 
             d3.json('/search-county?'+qry)
                 .then(function(data){
-
-
+                    console.log(data)
                     $('table').bootstrapTable({
-                        data: data
+                        data: data.slice(0,10)
                     });
 
                     console.log("about to execute visual")

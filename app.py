@@ -30,15 +30,15 @@ def search_county():
             .format(job=args["job"],edu=args["edu"],health=args["health"],
              col=args["col"],traffic=args["traffic"],safety=args["safety"])
         print(sql)
-        #    " job>={job} and edu>={edu} and health>={health}"
-        #    " and col>={col} and traffic>={traffic} and safety>={safety}"
-
 
     conn = sqlite3.connect( DB )
     conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
     db = conn.cursor()
     rows = db.execute(sql).fetchall()
     conn.close()
+    #return jsonify(rows)
+    #print(rows[0][0],rows[0][1],rows[0][2])
+    #return[jsonify(ix) for ix in rows]
     return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
 
 
