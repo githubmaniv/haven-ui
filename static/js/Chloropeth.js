@@ -80,6 +80,7 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
 
 
 function Choropleth(data,{
+    chartId="chart",
     id = d => d.id, // given d in data, returns the feature id
     value = () => undefined, // given d in data, returns the quantitative value
     title, // given a feature f and possibly a datum d, returns the hover text
@@ -145,7 +146,7 @@ function Choropleth(data,{
     const path = d3.geoPath(projection);
 
     svg = d3.create("svg")
-        .attr("id","chart")
+        .attr("id",chartId)
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])

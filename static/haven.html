@@ -21,7 +21,8 @@
     <div class="row">
         <div class="col-sm bg-light ">
             <p>
-                Education <input class="span2" data-slider-handle="square" data-slider-id="RC"
+                Education
+                <input class="span2" data-slider-handle="square" data-slider-id="RC"
                                  data-slider-max="255" data-slider-min="0"
                                  data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="education_index"
                                  type="range" value="0" onchange="index_changed(value)"/>
@@ -82,9 +83,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#tab-03" aria-controls="tab-03" tabindex="-1"  role="tab" data-toggle="tab" >Migration Patterns</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tab-04" aria-controls="tab-04" tabindex="-1"  role="tab" data-toggle="tab" >Zillow</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -115,13 +113,35 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab-02">
-
+                    <div class="row">
+                        <div class="col-lg-9 align-self-start">
+                            <div id="similarcounties-chart"></div>
+                            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                        </div>
+                        <div class="col-lg-3 align-self-start">
+                            <p>Top 10 counties based on your preference</p>
+                            <table class="table caption-top" id="simi-results-table"
+                                   data-show-export="true" data-search="true"
+                                   data-show-refresh="true"
+                                   data-show-toggle="true"
+                                   data-side-pagination="client"
+                                   data-pagination="true"
+                                   data-show-export="true"
+                                   data-auto-refresh="true"  >
+                                <caption>Top 10 Counties from your search</caption>
+                                <thead>
+                                <tr>
+                                    <th data-field="state" sortable="True" >State</th>
+                                    <th data-field="county"  data-formatter="LinkFormatter" >County</th>
+                                    <th data-field="cluster_id">Similarity Id</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab-03">
                     content of tab 3
-                </div>
-                <div role="tabpanel" class="tab-pane" id="tab-04" height="100%">
-                    <iframe id="zillow" width="100%" height="600px"></iframe>
                 </div>
             </div>
         </div>
@@ -153,6 +173,7 @@ for the table -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
 <script src="js/Chloropeth.js"></script>
+<script src="js/similarcounties.js"></script>
 <script>
 
     document.addEventListener('readystatechange', event => {
@@ -166,6 +187,13 @@ for the table -->
                 $('#traffic_index').val(),
                 $('#safety_index').val()
             );
+
+            refreshSimilarCounties($('#job_index').val(),
+                $('#education_index').val(),
+                $('#health_index').val(),
+                $('#col_index').val(),
+                $('#traffic_index').val(),
+                $('#safety_index').val())
         }
     });
 
@@ -182,6 +210,8 @@ for the table -->
             $('#traffic_index').val(),
             $('#safety_index').val()
             );
+
+
 
     }
 

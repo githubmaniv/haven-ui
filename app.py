@@ -26,7 +26,7 @@ def search_county():
     #abs(random() % 1000)/100.0 as
     if request.args:
         args=request.args
-        sql="SELECT id,county,state,job*{job}+edu*{edu}+health*{health}+col*{col}+traffic*{traffic}+safety*{safety} as rate from counties order by 4 desc"\
+        sql="SELECT id,county,state,job*{job}+edu*{edu}+health*{health}+col*{col}+traffic*{traffic}+safety*{safety} as rate,cluster_id from counties"\
             .format(job=args["job"],edu=args["edu"],health=args["health"],
              col=args["col"],traffic=args["traffic"],safety=args["safety"])
         print(sql)
