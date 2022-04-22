@@ -10,26 +10,33 @@ function refreshSimilarCounties(job,edu,health,col,traffic,safety)
     d3.json("json/counties-albers-10m.json")
         .then(function(us) {
             console.log('similar counties')
-            //index_denominator=((Number(job)+Number(edu)+Number(health)+Number(col)+Number(traffic)+Number(safety))/6)*6
-            index_denominator= ((Number(job)+Number(edu)+Number(health)+Number(col)+Number(traffic)+Number(safety))/6)*6
-            console.log("index_denominator");
-            console.log(index_denominator)
-            job_weight=Number(job)/index_denominator
-            console.log((job_weight))
-            edu_weight=Number(edu)/index_denominator
-            health_weight=Number(health)/index_denominator
-            col_weight=Number(col)/index_denominator
-            traffic_weight=Number(traffic)/index_denominator
-            safety_weight=Number(safety)/index_denominator
+
             usa=us
             states = topojson.feature(us, us.objects.states)
             counties = topojson.feature(us, us.objects.counties)
             statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b)
             statemap = new Map(states.features.map(d => [d.id, d]))
 
-            qry='job='+job_weight+'&edu='+edu_weight+'&health='+health_weight+'&col='+col_weight+'&traffic='+traffic_weight+'&safety='+safety_weight
+        //    qry='job='+job_weight+'&edu='+edu_weight+'&health='+health_weight+'&col='+col_weight+'&traffic='+traffic_weight+'&safety='+safety_weight
+            //console.log(col,edu,traffic,health,job,safety)
+            //console.log('col===on',col==='on')
+            let qry='cluster_'
+            if (col) qry=qry+'4_'
 
-            d3.json('/search-county?'+qry)
+            if (edu) qry=qry+'5_'
+
+            if (traffic) qry=qry+'6_'
+
+            if (health) qry=qry+'7_'
+
+            if (job) qry=qry+'8_'
+
+            if (safety) qry=qry+'9_'
+
+            qry=qry.substr(0,qry.length-1)
+            if (qry==='cluster')  {qry='cluster_4_5_6_7_8_9'}
+
+            d3.json('/search-similar-county?q='+qry)
                 .then(function(data){
                     console.log(data)
                     //sortedFoods = data.slice().sort((a, b) => d3.descending(a.rate, b.rate)).slice(0,10)
@@ -48,7 +55,7 @@ function refreshSimilarCounties(job,edu,health,col,traffic,safety)
                         id: d => d.id,
                         value: d => d.cluster_id,
                         scale: d3.scaleOrdinal,
-                        domain: [1,2,3,4,5,6,7,8,9,25],
+                        domain: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],
                         range: ["#C2B9BC", "#6E6B58","#C7B79D","#ABA082","#CFBDAE","#A64B52","#9A806A",
                             "#EAB8CE","#7B5E71","#803932","#733444","#A68446","#A68051","#F2CDAC",
                             "#A63737","#D87181","#3F3839","#F0CBBC","#CD3E2D","#DA8583","#580009",

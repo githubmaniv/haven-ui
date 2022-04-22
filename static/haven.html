@@ -19,57 +19,23 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm bg-light ">
-            <p>
-                Education
-                <input class="span2" data-slider-handle="square" data-slider-id="RC"
-                                 data-slider-max="255" data-slider-min="0"
-                                 data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="education_index"
-                                 type="range" value="0" onchange="index_changed(value)"/>
-            </p>
-            <p>
-                Jobs <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="100"
-                            data-slider-min="0"
-                            data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="job_index"
-                            type="range" value="0" onchange="index_changed(value)"  />
-            </p>
-
-            </div>
-        <div class="col-sm bg-light">
-            <p>
-                Heatlh <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
-                              data-slider-min="0"
-                              data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="health_index"
-                              type="range" value="0" onchange="index_changed(value)" />
-            </p>
-            <p>
-                Entertainment <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
-                               data-slider-max="255" data-slider-min="0"
-                               data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="traffic_index"
-                               type="range" value="100" onchange="index_changed(value)"/>
-            </p>
-
-        </div>
-        <div class="col-sm bg-light">
-            <p>
-                Cost of Living <input class="span2" data-slider-handle="round" data-slider-id="GC"
-                                      data-slider-max="255"
-                                      data-slider-min="0" data-slider-step="1" data-slider-tooltip="hide"
-                                      data-slider-value="0" id="col_index" type="range"
-                                      value="0" onchange="index_changed(value)"/>
-            </p>
-            <p>
-                Safety <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
-                             data-slider-max="255" data-slider-min="0"
-                             data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="safety_index"
-                             type="range" value="0" onchange="index_changed(value)"/>
-            </p>
+        <div class="col-sm-12">
+            <p></p>
         </div>
     </div>
-
-
-
+    <div class="row">
+        <div class="col-sm-12 align-content-center">
+            <div class="card bg-opacity-25 text-black text-center p-3">
+                <h5 class="card-title">Find your place</h5>
+                <p >Identify counties within the United States suitable to live based on the user’s ranking of factors</p>
+        </div>
+    </div>
 </div>
+    <div class="row">
+        <div class="col-sm-12 align-content-center">
+            <p></p>
+        </div>
+    </div>
 <div class="container-fluid" id="container1" >
     <div class="row">
         <div class="col-lg-12 align-content-between">
@@ -86,10 +52,59 @@
             </ul>
         </div>
     </div>
-    <div class="row">
+
+        <div class="row">
         <div class="col-lg-12 align-self-start">
             <div class="tab-content" height="100%">
                 <div role="tabpanel" class="tab-pane active" id="tab-01">
+                    <div class="row">
+                        <div class="col-sm bg-light ">
+                            <p>
+                                Education
+                                <input class="span2" data-slider-handle="square" data-slider-id="RC"
+                                       data-slider-max="255" data-slider-min="0"
+                                       data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="education_index"
+                                       type="range" value="0" onchange="index_changed(value)"/>
+                            </p>
+                            <p>
+                                Jobs <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="100"
+                                            data-slider-min="0"
+                                            data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="job_index"
+                                            type="range" value="0" onchange="index_changed(value)"  />
+                            </p>
+
+                        </div>
+                        <div class="col-sm bg-light">
+                            <p>
+                                Health <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
+                                              data-slider-min="0"
+                                              data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="health_index"
+                                              type="range" value="0" onchange="index_changed(value)" />
+                            </p>
+                            <p>
+                                Entertainment <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                                     data-slider-max="255" data-slider-min="0"
+                                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="traffic_index"
+                                                     type="range" value="100" onchange="index_changed(value)"/>
+                            </p>
+
+                        </div>
+                        <div class="col-sm bg-light">
+                            <p>
+                                Cost of Living <input class="span2" data-slider-handle="round" data-slider-id="GC"
+                                                      data-slider-max="255"
+                                                      data-slider-min="0" data-slider-step="1" data-slider-tooltip="hide"
+                                                      data-slider-value="0" id="col_index" type="range"
+                                                      value="0" onchange="index_changed(value)"/>
+                            </p>
+                            <p>
+                                Safety <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                              data-slider-max="255" data-slider-min="0"
+                                              data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="safety_index"
+                                              type="range" value="0" onchange="index_changed(value)"/>
+                            </p>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-9 align-self-start">
                             <div id="observablehq-chart"></div>
@@ -113,6 +128,40 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab-02">
+                    <div class="row">
+                        <div class="col-sm bg-light ">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="education_check">
+                                <label class="form-check-label" for="education_check">Education</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="job_check">
+                                <label class="form-check-label" for="job_check">Jobs</label>
+                            </div>
+
+                        </div>
+                        <div class="col-sm bg-light">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="health_check">
+                                <label class="form-check-label" for="health_check">Health</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="entertainment_check" value="">
+                                <label class="form-check-label" for="education_check">Entertainment</label>
+                            </div>
+
+                        </div>
+                        <div class="col-sm bg-light">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="col_check" checked>
+                                <label class="form-check-label" for="col_check">Cost of Living</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="safety_check" unchecked >
+                                <label class="form-check-label" for="safety_check">Safety</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-9 align-self-start">
                             <div id="similarcounties-chart"></div>
@@ -188,15 +237,53 @@ for the table -->
                 $('#safety_index').val()
             );
 
-            refreshSimilarCounties($('#job_index').val(),
-                $('#education_index').val(),
-                $('#health_index').val(),
-                $('#col_index').val(),
-                $('#traffic_index').val(),
-                $('#safety_index').val())
+            refreshSimilarCounties($('#job_check').val(),
+                $('#education_check').val(),
+                $('#health_check').val(),
+                $('#col_check').val(),
+                $('#entertainment_check').val(),
+                $('#safety_check').val())
         }
     });
 
+    $('#education_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+    $('#job_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+    $('#health_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+    $('#entertainment_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+    $('#col_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+    $('#safety_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
+
+
+    function updateSimilarCounties(src,val)
+    {
+
+        refreshSimilarCounties($('#job_check').prop('checked'),
+            $('#education_check').prop('checked'),
+            $('#health_check').prop('checked'),
+            $('#col_check').prop('checked'),
+            $('#entertainment_check').prop('checked'),
+            $('#safety_check').prop('checked')
+        );
+    }
+
+    function factor_changed(value) {
+        //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
+        //topojson = require("topojson-client@3")
+
+        console.log("factors changed");
+        alert(value)
+
+        refreshSimilarCounties($('#job_check').val(),
+            $('#education_check').val(),
+            $('#health_check').val(),
+            $('#col_check').val(),
+            $('#entertainment_check').val(),
+            $('#safety_check').val()
+        );
+
+
+
+    }
     function index_changed(value) {
         //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
         //topojson = require("topojson-client@3")

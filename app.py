@@ -26,7 +26,7 @@ def search_county():
     #abs(random() % 1000)/100.0 as
     if request.args:
         args=request.args
-        sql="SELECT id,county,state,job*{job}+edu*{edu}+health*{health}+col*{col}+traffic*{traffic}+safety*{safety} as rate,cluster_id from counties"\
+        sql="SELECT id,county,state,job*{job}+edu*{edu}+health*{health}+col*{col}+traffic*{traffic}+safety*{safety} as rate from counties"\
             .format(job=args["job"],edu=args["edu"],health=args["health"],
              col=args["col"],traffic=args["traffic"],safety=args["safety"])
         print(sql)
@@ -41,6 +41,25 @@ def search_county():
     #return[jsonify(ix) for ix in rows]
     return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
 
+@app.route('/search-similar-county')
+def search_similar_county():
+
+    if request.args:
+        args=request.args
+
+    print(args)
+
+    sql="SELECT id,county,state,{cluster} as cluster_id from counties".format(cluster=args['q'])
+
+    conn = sqlite3.connect( DB )
+    conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
+    db = conn.cursor()
+    rows = db.execute(sql).fetchall()
+    conn.close()
+    #return jsonify(rows)
+    #print(rows[0][0],rows[0][1],rows[0][2])
+    #return[jsonify(ix) for ix in rows]
+    return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
 
 if __name__ == '__main__':
 
