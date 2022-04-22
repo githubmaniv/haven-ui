@@ -14,7 +14,7 @@
 <body>
 <nav class="class=navbar navbar-dark bg-primary  static-top">
     <div class="container">
-        <a class="navbar-brand align-self-start" href="index.html">HaVen!</a>
+        <a class="navbar-brand bp3-align-left" href="haven.html">HaVen!</a>
     </div>
 </nav>
 <div class="container-fluid">
@@ -27,307 +27,329 @@
         <div class="col-sm-12 align-content-center">
             <div class="card bg-opacity-25 text-black text-center p-3">
                 <h5 class="card-title">Find your place</h5>
-                <p >Identify counties within the United States suitable to live based on the user’s ranking of factors</p>
+                <p>Identify counties within the United States suitable to live based on the user’s ranking of
+                    factors</p>
+            </div>
         </div>
     </div>
-</div>
     <div class="row">
         <div class="col-sm-12 align-content-center">
             <p></p>
         </div>
     </div>
-<div class="container-fluid" id="container1" >
-    <div class="row">
-        <div class="col-lg-12 align-content-between">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#tab-01" aria-controls="tab-01"  role="tab" data-toggle="tab">Search Results</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tab-02" aria-controls="tab-02"  role="tab" data-toggle="tab">Similar Counties</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tab-03" aria-controls="tab-03" tabindex="-1"  role="tab" data-toggle="tab" >Migration Patterns</a>
-                </li>
-            </ul>
+    <div class="container-fluid" id="container1">
+        <div class="row">
+            <div class="col-lg-12 align-content-between">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#tab-01" aria-controls="tab-01" role="tab"
+                           data-toggle="tab">Search Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Similar
+                            Counties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tab-03" aria-controls="tab-03" tabindex="-1" role="tab"
+                           data-toggle="tab">Migration Patterns</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
         <div class="row">
-        <div class="col-lg-12 align-self-start">
-            <div class="tab-content" height="100%">
-                <div role="tabpanel" class="tab-pane active" id="tab-01">
-                    <div class="row">
-                        <div class="col-sm bg-light ">
-                            <p>
-                                Education
-                                <input class="span2" data-slider-handle="square" data-slider-id="RC"
-                                       data-slider-max="255" data-slider-min="0"
-                                       data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="education_index"
-                                       type="range" value="0" onchange="index_changed(value)"/>
-                            </p>
-                            <p>
-                                Jobs <input class="span2" data-slider-handle="square" data-slider-id="RC" data-slider-max="100"
-                                            data-slider-min="0"
-                                            data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="job_index"
-                                            type="range" value="0" onchange="index_changed(value)"  />
-                            </p>
+            <div class="col-lg-12 align-self-start">
+                <div class="tab-content" height="100%">
+                    <div role="tabpanel" class="tab-pane active" id="tab-01">
+                        <div class="row">
+                            <div class="col-sm bg-light ">
+                                <p>
+                                    Education
+                                    <input class="span2" data-slider-handle="square" data-slider-id="RC"
+                                           data-slider-max="255" data-slider-min="0"
+                                           data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0"
+                                           id="education_index"
+                                           type="range" value="0" onchange="index_changed(value)"/>
+                                </p>
+                                <p>
+                                    Jobs <input class="span2" data-slider-handle="square" data-slider-id="RC"
+                                                data-slider-max="100"
+                                                data-slider-min="0"
+                                                data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0"
+                                                id="job_index"
+                                                type="range" value="0" onchange="index_changed(value)"/>
+                                </p>
 
-                        </div>
-                        <div class="col-sm bg-light">
-                            <p>
-                                Health <input class="span2" data-slider-handle="round" data-slider-id="GC" data-slider-max="255"
-                                              data-slider-min="0"
-                                              data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="health_index"
-                                              type="range" value="0" onchange="index_changed(value)" />
-                            </p>
-                            <p>
-                                Entertainment <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
-                                                     data-slider-max="255" data-slider-min="0"
-                                                     data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="traffic_index"
-                                                     type="range" value="100" onchange="index_changed(value)"/>
-                            </p>
+                            </div>
+                            <div class="col-sm bg-light">
+                                <p>
+                                    Health <input class="span2" data-slider-handle="round" data-slider-id="GC"
+                                                  data-slider-max="255"
+                                                  data-slider-min="0"
+                                                  data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0"
+                                                  id="health_index"
+                                                  type="range" value="0" onchange="index_changed(value)"/>
+                                </p>
+                                <p>
+                                    Entertainment <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                                         data-slider-max="255" data-slider-min="0"
+                                                         data-slider-step="1" data-slider-tooltip="hide"
+                                                         data-slider-value="0" id="traffic_index"
+                                                         type="range" value="100" onchange="index_changed(value)"/>
+                                </p>
 
-                        </div>
-                        <div class="col-sm bg-light">
-                            <p>
-                                Cost of Living <input class="span2" data-slider-handle="round" data-slider-id="GC"
-                                                      data-slider-max="255"
-                                                      data-slider-min="0" data-slider-step="1" data-slider-tooltip="hide"
-                                                      data-slider-value="0" id="col_index" type="range"
-                                                      value="0" onchange="index_changed(value)"/>
-                            </p>
-                            <p>
-                                Safety <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
-                                              data-slider-max="255" data-slider-min="0"
-                                              data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0" id="safety_index"
-                                              type="range" value="0" onchange="index_changed(value)"/>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-9 align-self-start">
-                            <div id="observablehq-chart"></div>
-                            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
-                        </div>
-                        <div class="col-lg-3 align-self-start">
-                            <p>Top 10 counties based on your preference</p>
-                            <table class="table caption-top" id="results-table"
-                                   data-show-export="true" data-show-refresh="true"
-                                   data-auto-refresh="true"  >
-                                <caption>Top 10 Counties from your search</caption>
-                                <thead>
-                                <tr>
-                                    <th data-field="state">State</th>
-                                    <th data-field="county"  data-formatter="LinkFormatter" >County</th>
-                                    <th data-field="rate">Score</th>
-                                </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="tab-02">
-                    <div class="row">
-                        <div class="col-sm bg-light ">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="education_check">
-                                <label class="form-check-label" for="education_check">Education</label>
                             </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="job_check">
-                                <label class="form-check-label" for="job_check">Jobs</label>
+                            <div class="col-sm bg-light">
+                                <p>
+                                    Cost of Living <input class="span2" data-slider-handle="round" data-slider-id="GC"
+                                                          data-slider-max="255"
+                                                          data-slider-min="0" data-slider-step="1"
+                                                          data-slider-tooltip="hide"
+                                                          data-slider-value="0" id="col_index" type="range"
+                                                          value="0" onchange="index_changed(value)"/>
+                                </p>
+                                <p>
+                                    Safety <input class="span2" data-slider-handle="triangle" data-slider-id="BC"
+                                                  data-slider-max="255" data-slider-min="0"
+                                                  data-slider-step="1" data-slider-tooltip="hide" data-slider-value="0"
+                                                  id="safety_index"
+                                                  type="range" value="0" onchange="index_changed(value)"/>
+                                </p>
                             </div>
-
                         </div>
-                        <div class="col-sm bg-light">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="health_check">
-                                <label class="form-check-label" for="health_check">Health</label>
+                        <div class="row">
+                            <div class="col-lg-9 align-self-start">
+                                <img src="assets/img/legend.PNG">
+                                <div id="observablehq-chart"></div>
+                                <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
                             </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="entertainment_check" value="">
-                                <label class="form-check-label" for="education_check">Entertainment</label>
-                            </div>
-
-                        </div>
-                        <div class="col-sm bg-light">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="col_check" checked>
-                                <label class="form-check-label" for="col_check">Cost of Living</label>
-                            </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="safety_check" unchecked >
-                                <label class="form-check-label" for="safety_check">Safety</label>
+                            <div class="col-lg-3 align-self-start">
+                                <p>Top 10 counties based on your preference</p>
+                                <table class="table caption-top" id="results-table"
+                                       data-show-export="true" data-show-refresh="true"
+                                       data-auto-refresh="true">
+                                    <caption>Top 10 Counties from your search</caption>
+                                    <thead>
+                                    <tr>
+                                        <th data-field="state">State</th>
+                                        <th data-field="county" data-formatter="LinkFormatter">County</th>
+                                        <th data-field="rate">Score</th>
+                                    </tr>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-9 align-self-start">
-                            <div id="similarcounties-chart"></div>
-                            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                    <div role="tabpanel" class="tab-pane" id="tab-02">
+                        <div class="row">
+                            <div class="col-sm bg-light ">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="education_check">
+                                    <label class="form-check-label" for="education_check">Education</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="job_check">
+                                    <label class="form-check-label" for="job_check">Jobs</label>
+                                </div>
+
+                            </div>
+                            <div class="col-sm bg-light">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="health_check">
+                                    <label class="form-check-label" for="health_check">Health</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="entertainment_check" value="">
+                                    <label class="form-check-label" for="education_check">Entertainment</label>
+                                </div>
+
+                            </div>
+                            <div class="col-sm bg-light">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="col_check" checked>
+                                    <label class="form-check-label" for="col_check">Cost of Living</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="safety_check" unchecked>
+                                    <label class="form-check-label" for="safety_check">Safety</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-3 align-self-start">
-                            <p>Top 10 counties based on your preference</p>
-                            <table class="table caption-top" id="simi-results-table"
-                                   data-show-export="true" data-search="true"
-                                   data-show-refresh="true"
-                                   data-show-toggle="true"
-                                   data-side-pagination="client"
-                                   data-pagination="true"
-                                   data-show-export="true"
-                                   data-auto-refresh="true"  >
-                                <caption>Top 10 Counties from your search</caption>
-                                <thead>
-                                <tr>
-                                    <th data-field="state" sortable="True" >State</th>
-                                    <th data-field="county"  data-formatter="LinkFormatter" >County</th>
-                                    <th data-field="cluster_id">Similarity Id</th>
-                                </tr>
-                                </thead>
-                            </table>
+                        <div class="row">
+                            <div class="col-lg-9 align-self-start">
+                                <div id="similarcounties-chart"></div>
+                                <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                            </div>
+                            <div class="col-lg-3 align-self-start">
+                                <p>Top 10 counties based on your preference</p>
+                                <table class="table caption-top" id="simi-results-table"
+                                       data-show-export="true" data-search="true"
+                                       data-show-refresh="true"
+                                       data-show-toggle="true"
+                                       data-side-pagination="client"
+                                       data-pagination="true"
+                                       data-show-export="true"
+                                       data-auto-refresh="true">
+                                    <caption>Top 10 Counties from your search</caption>
+                                    <thead>
+                                    <tr>
+                                        <th data-field="state" sortable="True">State</th>
+                                        <th data-field="county" data-formatter="LinkFormatter">County</th>
+                                        <th data-field="cluster_id">Similarity Id</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="tab-03">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <div id="title_migration">Click Any County to Find Where Americans Moved From</div>
-                            <div id="map-migration"></div>
-                            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
-                        </div>
-                        <div class="col-lg-3 align-self-start">
-                            <p>Counties inflow data</p>
-                            <table class="table caption-top" id="mig-results-table"
-                                   data-show-export="true" data-search="true"
-                                   data-show-refresh="true"
-                                   data-show-toggle="true"
-                                   data-side-pagination="client"
-                                   data-pagination="true"
-                                   data-show-export="true"
-                                   data-auto-refresh="true"  >
-                                <caption>Counties inflow data</caption>
-                                <thead>
-                                <tr>
-                                    <th data-field="state" sortable="True" >State</th>
-                                    <th data-field="county"  data-formatter="LinkFormatter" >County</th>
-                                    <th data-field="value" sortable="True" >Number of People Inflow</th>
-                                </tr>
-                                </thead>
-                            </table>
+                    <div role="tabpanel" class="tab-pane" id="tab-03">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div id="title_migration">Click Any County to Find Where Americans Moved From</div>
+                                <div id="map-migration"></div>
+                                <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                            </div>
+                            <div class="col-lg-3 align-self-start">
+                                <p>Counties inflow data</p>
+                                <table class="table caption-top" id="mig-results-table"
+                                       data-show-export="true" data-search="true"
+                                       data-show-refresh="true"
+                                       data-show-toggle="true"
+                                       data-side-pagination="client"
+                                       data-pagination="true"
+                                       data-show-export="true"
+                                       data-auto-refresh="true">
+                                    <caption>Counties inflow data</caption>
+                                    <thead>
+                                    <tr>
+                                        <th data-field="state" sortable="True">State</th>
+                                        <th data-field="county" data-formatter="LinkFormatter">County</th>
+                                        <th data-field="value" sortable="True">Number of People Inflow</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </div>
+                <script src="https://d3js.org/d3.v7.min.js"></script>
+                <script src="https://d3js.org/queue.v1.min.js"></script>
+                <script src="https://d3js.org/topojson.v1.min.js"></script>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://d3js.org/queue.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
+                <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+                        src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script crossorigin="anonymous"
+                        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                        src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+                <script crossorigin="anonymous"
+                        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                        src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
+                <!-- Include Bootstrap for styling -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+                <!-- Include the Bootstrap Table CSS
+                for the table -->
+                <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
 
-<script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        src="//code.jquery.com/jquery-3.5.1.min.js"></script>
-<script crossorigin="anonymous"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script crossorigin="anonymous"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
-<!-- Include Bootstrap for styling -->
-<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
-<!-- Include the Bootstrap Table CSS
-for the table -->
-<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+                <script src="js/Chloropeth.js"></script>
+                <script src="js/similarcounties.js"></script>
+                <script src="js/migrationInflow.js"></script>
+                <script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
-<script src="js/Chloropeth.js"></script>
-<script src="js/similarcounties.js"></script>
-<script src="js/migrationInflow.js"></script>
-<script>
+                    document.addEventListener('readystatechange', event => {
 
-    document.addEventListener('readystatechange', event => {
+                        // When window loaded ( external resources are loaded too- `css`,`src`, etc...)
+                        if (event.target.readyState === "complete") {
+                            refreshChloropeth($('#job_index').val(),
+                                $('#education_index').val(),
+                                $('#health_index').val(),
+                                $('#col_index').val(),
+                                $('#traffic_index').val(),
+                                $('#safety_index').val()
+                            );
 
-        // When window loaded ( external resources are loaded too- `css`,`src`, etc...)
-        if (event.target.readyState === "complete") {
-            refreshChloropeth($('#job_index').val(),
-                $('#education_index').val(),
-                $('#health_index').val(),
-                $('#col_index').val(),
-                $('#traffic_index').val(),
-                $('#safety_index').val()
-            );
+                            refreshSimilarCounties($('#job_check').val(),
+                                $('#education_check').val(),
+                                $('#health_check').val(),
+                                $('#col_check').val(),
+                                $('#entertainment_check').val(),
+                                $('#safety_check').val())
 
-            refreshSimilarCounties($('#job_check').val(),
-                $('#education_check').val(),
-                $('#health_check').val(),
-                $('#col_check').val(),
-                $('#entertainment_check').val(),
-                $('#safety_check').val())
+                            show_migration(null);
+                        }
+                    });
 
-            show_migration(null);
-        }
-    });
-
-    $('#education_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-    $('#job_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-    $('#health_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-    $('#entertainment_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-    $('#col_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-    $('#safety_check').change(function(){updateSimilarCounties($(this),$(this).prop('checked'))})
-
-
-    function updateSimilarCounties(src,val)
-    {
-
-        refreshSimilarCounties($('#job_check').prop('checked'),
-            $('#education_check').prop('checked'),
-            $('#health_check').prop('checked'),
-            $('#col_check').prop('checked'),
-            $('#entertainment_check').prop('checked'),
-            $('#safety_check').prop('checked')
-        );
-    }
-
-    function factor_changed(value) {
-        //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
-        //topojson = require("topojson-client@3")
+                    $('#education_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
+                    $('#job_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
+                    $('#health_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
+                    $('#entertainment_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
+                    $('#col_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
+                    $('#safety_check').change(function () {
+                        updateSimilarCounties($(this), $(this).prop('checked'))
+                    })
 
 
-        refreshSimilarCounties($('#job_check').val(),
-            $('#education_check').val(),
-            $('#health_check').val(),
-            $('#col_check').val(),
-            $('#entertainment_check').val(),
-            $('#safety_check').val()
-        );
-    }
-    function index_changed(value) {
-        //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
-        //topojson = require("topojson-client@3")
+                    function updateSimilarCounties(src, val) {
 
-     console.log("index changed");
-        refreshChloropeth($('#job_index').val(),
-            $('#education_index').val(),
-            $('#health_index').val(),
-            $('#col_index').val(),
-            $('#traffic_index').val(),
-            $('#safety_index').val()
-            );
-    }
+                        refreshSimilarCounties($('#job_check').prop('checked'),
+                            $('#education_check').prop('checked'),
+                            $('#health_check').prop('checked'),
+                            $('#col_check').prop('checked'),
+                            $('#entertainment_check').prop('checked'),
+                            $('#safety_check').prop('checked')
+                        );
+                    }
 
-    function LinkFormatter(value, row, index) {
-        return value+"<a href='https://zillow.com/homes/"+value.replace(' County','')+"-county' target=\"_blank\">"+' Homes'+"</a>";
-        //return value;//.replace(' County');
-    }
-</script>
-</div>
+                    function factor_changed(value) {
+                        //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
+                        //topojson = require("topojson-client@3")
+
+
+                        refreshSimilarCounties($('#job_check').val(),
+                            $('#education_check').val(),
+                            $('#health_check').val(),
+                            $('#col_check').val(),
+                            $('#entertainment_check').val(),
+                            $('#safety_check').val()
+                        );
+                    }
+
+                    function index_changed(value) {
+                        //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
+                        //topojson = require("topojson-client@3")
+
+                        console.log("index changed");
+                        refreshChloropeth($('#job_index').val(),
+                            $('#education_index').val(),
+                            $('#health_index').val(),
+                            $('#col_index').val(),
+                            $('#traffic_index').val(),
+                            $('#safety_index').val()
+                        );
+                    }
+
+                    function LinkFormatter(value, row, index) {
+                        return value + "<a href='https://zillow.com/homes/" + value.replace(' County', '') + "-county' target=\"_blank\">" + ' Homes' + "</a>";
+                        //return value;//.replace(' County');
+                    }
+                </script>
+
 </body>
 </html>
