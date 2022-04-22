@@ -190,7 +190,34 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab-03">
-                    content of tab 3
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div id="title_migration">Click Any County to Find Where Americans Moved From</div>
+                            <div id="map-migration"></div>
+                            <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
+                        </div>
+                        <div class="col-lg-3 align-self-start">
+                            <p>Counties inflow data</p>
+                            <table class="table caption-top" id="mig-results-table"
+                                   data-show-export="true" data-search="true"
+                                   data-show-refresh="true"
+                                   data-show-toggle="true"
+                                   data-side-pagination="client"
+                                   data-pagination="true"
+                                   data-show-export="true"
+                                   data-auto-refresh="true"  >
+                                <caption>Counties inflow data</caption>
+                                <thead>
+                                <tr>
+                                    <th data-field="state" sortable="True" >State</th>
+                                    <th data-field="county"  data-formatter="LinkFormatter" >County</th>
+                                    <th data-field="value" sortable="True" >Number of People Inflow</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -223,6 +250,7 @@ for the table -->
 <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
 <script src="js/Chloropeth.js"></script>
 <script src="js/similarcounties.js"></script>
+<script src="js/migrationInflow.js"></script>
 <script>
 
     document.addEventListener('readystatechange', event => {
@@ -243,6 +271,8 @@ for the table -->
                 $('#col_check').val(),
                 $('#entertainment_check').val(),
                 $('#safety_check').val())
+
+            show_migration(null);
         }
     });
 
@@ -270,8 +300,6 @@ for the table -->
         //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
         //topojson = require("topojson-client@3")
 
-        console.log("factors changed");
-        alert(value)
 
         refreshSimilarCounties($('#job_check').val(),
             $('#education_check').val(),
@@ -280,16 +308,12 @@ for the table -->
             $('#entertainment_check').val(),
             $('#safety_check').val()
         );
-
-
-
     }
     function index_changed(value) {
         //main.redefine("unemployment", fetch("/county-rating").then(response => response.json()));
         //topojson = require("topojson-client@3")
 
      console.log("index changed");
-
         refreshChloropeth($('#job_index').val(),
             $('#education_index').val(),
             $('#health_index').val(),
@@ -297,9 +321,6 @@ for the table -->
             $('#traffic_index').val(),
             $('#safety_index').val()
             );
-
-
-
     }
 
     function LinkFormatter(value, row, index) {
@@ -307,5 +328,6 @@ for the table -->
         //return value;//.replace(' County');
     }
 </script>
+</div>
 </body>
 </html>

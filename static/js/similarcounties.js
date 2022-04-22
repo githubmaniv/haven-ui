@@ -60,7 +60,7 @@ function refreshSimilarCounties(job,edu,health,col,traffic,safety)
                             "#EAB8CE","#7B5E71","#803932","#733444","#A68446","#A68051","#F2CDAC",
                             "#A63737","#D87181","#3F3839","#F0CBBC","#CD3E2D","#DA8583","#580009",
                             "#A60121","#F42D64","#F03C7D","#455C01"],
-                        title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
+                        title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.cluster_id}`,
                         features: counties,
                         borders: statemesh,
                         width: 975,

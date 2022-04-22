@@ -61,6 +61,38 @@ def search_similar_county():
     #return[jsonify(ix) for ix in rows]
     return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
 
+@app.route('/migration-by-county')
+def migration_county():
+    #abs(random() % 1000)/100.0 as
+
+    if request.args:
+        args = request.args
+        sql = r"SELECT county,state,target, value from counties inner join edges_county on target=id where source={clicked_county}" \
+            .format(clicked_county=args["clicked_county"])
+    print(sql)
+    conn = sqlite3.connect( DB )
+    conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
+    db = conn.cursor()
+    rows = db.execute(sql).fetchall()
+    conn.close()
+    return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
+
+@app.route('/get-county-info')
+def get_countyinfo():
+    #abs(random() % 1000)/100.0 as
+
+    if request.args:
+        args = request.args
+        sql = r"SELECT county,state from counties where id={id}" \
+            .format(id=args["id"])
+
+    conn = sqlite3.connect( DB )
+    conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
+    db = conn.cursor()
+    rows = db.execute(sql).fetchall()
+    conn.close()
+    return json.dumps( [dict(ix) for ix in rows] ) #CREATE JSON
+
 if __name__ == '__main__':
 
     app.run()
