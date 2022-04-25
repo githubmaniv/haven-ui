@@ -72,7 +72,22 @@ function refreshSimilarCounties(job,edu,health,col,traffic,safety)
                         document.getElementById("chart2").remove()
                     }
 
+                    legend =Legend(d3.scaleOrdinal([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],
+                        ["#C2B9BC", "#6E6B58","#C7B79D","#ABA082","#CFBDAE","#A64B52","#9A806A",
+                            "#EAB8CE","#7B5E71","#803932","#733444","#A68446","#A68051","#F2CDAC",
+                            "#A63737","#D87181","#3F3839","#F0CBBC","#CD3E2D","#DA8583","#580009",
+                            "#A60121","#F42D64","#F03C7D","#455C01"]), "legend2", {
+                            title: "Similarity ID"
+                        })
+                        //console.log(legend)
+                        if (document.getElementById("legend2")) {
+                           document.getElementById("legend2").remove()
+                        }
+                        document.getElementById("similarcounties-chart").appendChild(legend)
+
                     document.getElementById("similarcounties-chart").appendChild(chart)
+
+
                 })
                 .catch(function(error){
                     console.log(error)

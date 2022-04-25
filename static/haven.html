@@ -122,7 +122,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-9 align-self-start">
-                                <img src="assets/img/legend.PNG">
+
                                 <div id="observablehq-chart"></div>
                                 <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
                             </div>
@@ -184,7 +184,7 @@
                                 <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
                             </div>
                             <div class="col-lg-3 align-self-start">
-                                <p>Top 10 counties based on your preference</p>
+                                <p>Similar counties based on your preference</p>
                                 <table class="table caption-top" id="simi-results-table"
                                        data-show-export="true" data-search="true"
                                        data-show-refresh="true"
@@ -193,7 +193,7 @@
                                        data-pagination="true"
                                        data-show-export="true"
                                        data-auto-refresh="true">
-                                    <caption>Top 10 Counties from your search</caption>
+                                    <caption>Similar Counties from your search</caption>
                                     <thead>
                                     <tr>
                                         <th data-field="state" sortable="True">State</th>
@@ -208,7 +208,9 @@
                     <div role="tabpanel" class="tab-pane" id="tab-03">
                         <div class="row">
                             <div class="col-lg-9">
-                                <div id="title_migration">Click Any County to Find Where Americans Moved From</div>
+                                <div id="title_migration">Click Any County to Find Where Americans Moved From
+                                    <p id="text_migration"></p>
+                                </div>
                                 <div id="map-migration"></div>
                                 <p>Credit: <a href="https://observablehq.com/@d3/choropleth">Choropleth by D3</a></p>
                             </div>
@@ -264,6 +266,7 @@
                 <script src="js/Chloropeth.js"></script>
                 <script src="js/similarcounties.js"></script>
                 <script src="js/migrationInflow.js"></script>
+                <script src="js/Legend_func.js"></script>
                 <script>
 
                     document.addEventListener('readystatechange', event => {

@@ -130,7 +130,7 @@ function show_migration(clicked_county) {
 
                 qry = 'clicked_county=' + selid
                 console.log(cnty_data)
-                d3.select('#title_migration').text('Migration To ' + cnty_data[0].county + ', ' + cnty_data[0].state);
+                d3.select('#text_migration').text('Migration To ' + cnty_data[0].county + ', ' + cnty_data[0].state);
                 d3.json('/migration-by-county?' + qry)
                     .then(function (data) {
                         console.log(data)
@@ -157,12 +157,23 @@ function show_migration(clicked_county) {
                             width: 975,
                             height: 610
                         })
-                        // console.log(chart)
                         if (document.getElementById("chart3")) {
                             document.getElementById("chart3").remove()
                         }
 
+                        legend =Legend(d3.scaleQuantize([1, maxy], d3.schemeReds[5]), "legend1", {
+                            title: "Score"
+                        })
+                        //console.log(legend)
+                        if (document.getElementById("legend1")) {
+                           document.getElementById("legend1").remove()
+                        }
+                        document.getElementById("map-migration").appendChild(legend)
+
                         document.getElementById("map-migration").appendChild(chart)
+
+
+
                     })
                     .catch(function (error) {
                         console.log(error)

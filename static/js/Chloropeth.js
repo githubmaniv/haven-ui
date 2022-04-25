@@ -61,6 +61,15 @@ function refreshChloropeth(job,edu,health,col,traffic,safety)
                         document.getElementById("chart").remove()
                     }
 
+                    legend =Legend(d3.scaleQuantize([1, 100], d3.schemeBlues[9]), "legend3", {
+                            title: "Score"
+                        })
+                        //console.log(legend)
+                        if (document.getElementById("legend3")) {
+                           document.getElementById("legend3").remove()
+                        }
+                        document.getElementById("observablehq-chart").appendChild(legend)
+
                     document.getElementById("observablehq-chart").appendChild(chart)
                 })
                 .catch(function(error){
